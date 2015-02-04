@@ -4,21 +4,20 @@ module.exports = function(grunt){
 
 		pkg: grunt.file.readJSON('package.json'),
 
+		jasmine_node: {
+			all: ['spec/']
+		},
+
+		jshint:{
+			all: ['Gruntfile.js', 'spec/**/*.js', 'src/**/*.js']
+		},
+
 		mocha_casperjs: {
 			options: {
 			},
 			files: {
 				src: ['test/**/*']
-			},
-
-		},
-		
-		jasmine_node: {
-			all: ['spec/']
-		},
-		
-		jshint:{
-			all: ['Gruntfile.js', 'spec/**/*.js', 'src/**/*.js']
+			}
 		}
 
 	});
